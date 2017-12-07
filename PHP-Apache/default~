@@ -1,0 +1,18 @@
+<VirtualHost *:80>
+     DocumentRoot /var/www/html/
+     ServerName localhost
+     DirectoryIndex index.php
+   
+     <Directory /var/www/html/>
+	<IfModule sapi_apache2.c>
+		  php_admin_flag engine on
+	</IfModule>
+	<IfModule mod_php5.c>
+		  php_admin_flag engine on
+	</IfModule>
+	        AllowOverride all
+        Order deny,allow
+        Allow from all
+     </Directory>
+</VirtualHost>
+

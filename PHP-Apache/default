@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+    #Allow idahoecosystems.org for production, or localhost for development
+     Header set Access-Control-Allow-Origin "*"
+     
+     DocumentRoot /var/www/html/
+     ServerName localhost
+     DirectoryIndex index.html
+
+     Alias /icons /var/www/html/icons
+
+     <Directory /var/www/html/>
+     		 Order allow,deny
+    		 Allow from all
+     </Directory>
+</VirtualHost>

@@ -1,0 +1,23 @@
+version: '2'
+services:
+  apache-server:
+    build: ../../../PHP-Apache/
+    ports:
+      - "10000:80"
+    links:
+      - neo4j
+  neo4j:
+      build: ../../../Neo4j/
+      ports:
+        - "7474:7474"
+        - "7687:7687"
+  node-server:
+    build: ../../../Node/
+    ports:
+      - "3005:80"
+    links:
+      - mongodb
+  mongodb:
+      build: ../../../MongoDB/
+      ports:
+        - "4005:27017"

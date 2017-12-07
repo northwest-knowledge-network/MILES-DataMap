@@ -1,0 +1,56 @@
+{
+  "name": "Node_Server",
+  "version": "1.0.0",
+  "description": "The best server omg",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "browserify": "^14.4.0",
+    "connect-mongo": "^1.3.2",
+    "express": "~4.15.3",
+    "express-session": "^1.15.5",
+    "helmet": "^3.8.1",
+    "mongodb": "^2.2.29",
+    "watchify": "^3.0.0",
+    "zone.js": "^0.8.17"
+  },
+  "devDependencies": {
+    "wdio-concise-reporter": "^0.1.2",
+    "wdio-mocha-framework": "^0.5.11",
+    "chai": "^4.0.1",
+    "chai-http": "^3.0.0",
+    "chai-jquery": "^2.0.0",
+    "chai-webdriverio": "^0.4.3",
+    "chromedriver": "^2.33.2",
+    "karma": "^1.7.1",
+    "karma-browserify": "^5.1.1",
+    "karma-chai": "^0.1.0",
+    "karma-chai-http": "^1.0.1",
+    "karma-chai-jquery": "^1.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jquery": "^0.2.2",
+    "karma-mocha": "^1.3.0",
+    "mocha": "^3.5.3",
+    "mocha-chrome": "^0.2.1",
+    "selenium-standalone": "^6.12.0",
+    "selenium-webdriver": "^3.6.0",
+    "wdio-selenium-standalone-service": "0.0.9",
+    "webdriverio": "^4.8.0",
+    "webpack": "^1.0.0"
+  },
+  "scripts": {
+    "test": "karma start --single-run --browsers Chrome karma.conf.js",
+    "start": "selenium-standalone start",
+    "selenium": "selenium-standalone",
+    "e2e": "./node_modules/.bin/wdio wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccasey645/NodeServer.git"
+  },
+  "author": "Casey Blair",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/northwest-knowledge-network/DataMap/issues"
+  }
+}

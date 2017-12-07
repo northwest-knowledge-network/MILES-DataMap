@@ -1,0 +1,54 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+#Error test screenshots
+**/errorShots
+
+#PHP componser files
+**/*.phar
+
+# compiled output
+/dist
+/tmp
+
+**/*.*~
+
+# dependencies
+**/node_modules
+
+#Neo4j import script
+**/import.txt
+
+#Neo4j CSV files
+**/CSVFiles
+
+#Generated json files
+**/results.json
+**/schema.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+#System Files
+.DS_Store
+Thumbs.db

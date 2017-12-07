@@ -1,0 +1,28 @@
+FROM php:7.1.9-apache
+
+RUN apt-get -y update && apt-get -y upgrade
+RUN apt-get install -y curl git
+
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+#Add HTML and PHP files in to container for production. 
+ADD ./PHP/ /var/www/html/
+
+#Run PHP dependency manager "composer"
+#RUN docker-php-ext-install bcmath
+#RUN php composer.phar install
+
+#Make apache own results.json and schema.json so it can write to those files.
+RUN touch /var/www/html/results.json && chown www-data /var/www/html/results.json && touch /var/www/html/schema.json && chown www-data /var/www/html/schema.json
+
+#Add header mod to Apache
+RUN a2enmod headers
+
+#Make directory for Jasmine testing files to mount into when container starts
+RUN cd /var/www/html/ && mkdir jasmine
+
+ADD ./bower_components/ /var/www/html/bower_components/
+
+ADD ./default /etc/apache2/sites-enabled/000-default.conf
+
+EXPOSE 80

@@ -1,0 +1,328 @@
+core {
+active-bg-color: #fff;
+active-bg-opacity: 0.333;
+}
+
+edge {
+curve-style: haystack;
+haystack-radius: 0;
+opacity: 0.333;
+width: 1;
+z-index: 0;
+overlay-opacity: 0;
+ events: no;
+font-size:12;
+label: data(type);
+min-zoomed-font-size:11;
+}
+
+node {
+width: 70;
+height: 70;
+border-style: solid;
+border-color: #000;
+border-width: 3;
+font-size: 12;
+font-weight: bold;
+text-valign: center;
+text-halign: center;
+color: #000;
+text-outline-width: 1;
+text-outline-color: #fff;
+text-outline-opacity: 1;
+overlay-color: #fff;
+text-wrap: wrap;
+text-max-width: 200;
+min-zoomed-font-size: 10;
+}
+
+edge[interaction = "cc"] {
+line-color: #FACD37;
+opacity: 0.666;
+z-index: 9;
+width: 4;
+}
+
+node[type = "Data Repository"] {
+background-color: #b15928; 
+text-outline-color: white;
+background-image: icons/repository.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+label: data(namRepo);
+shape: rectangle;
+width:100;
+height:100;
+}
+
+node[type = "Collaborators"] {
+background-color: #048A81; 
+text-outline-color: white;
+label: data(name);
+shape: rectangle;
+width: mapData(Quality, 70, 100, 20, 50);
+height: mapData(Quality, 70, 100, 20, 50);
+}
+
+node[type = "Subtopic"] {
+background-color: #b2df8a;
+text-outline-color: white;
+background-image: icons/subtopic.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+label: data(dscSubtopic);
+width: 70;
+height: 70;
+}
+
+node[type = "Department"] {
+background-color: #fdbf6f; 
+text-outline-color: white;
+background-image: icons/department.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+label: data(name);
+width: 70;
+height: 70;
+}
+
+node[type = "Question"] {
+background-color: #1f78b4; 
+text-outline-color: white;
+background-image: icons/question.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+label: data(dscQues);
+width: 70;
+height: 70;
+}
+
+node[type = "Research Theme"] {
+background-color: #f0e812; 
+text-outline-color: white;
+background-image: icons/theme.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+label: data(namTheme);
+width: 70;
+height: 70;
+}
+
+node[type = "Topic"] {
+background-color: #33a02c; 
+text-outline-color: white;
+background-image: icons/topic.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+label: data(dscTopic);
+}
+
+node[type = "Location"] {
+background-color: #eff3ff;
+text-outline-color: white;
+label: data(namLoc);
+shape: hexagon;
+width: 70;
+height: 70;
+}
+
+node[type = "Data"] {
+background-color: #6a3d9a; 
+text-outline-color: white;
+background-image: icons/data.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+label: data(namData);
+}
+
+node[type = "Data Type"] {  /* aka Data Type */
+background-color: #cab2d6; 
+text-outline-color: white;
+background-image: icons/type.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+label: data(dscClass);
+}
+
+node[type = "Method"] {
+background-color: #e5f5e0; 
+text-outline-color: white;
+label: data(dscMeth);
+}
+
+node[type = "Data Source"] {
+background-color: #d33fce; 
+text-outline-color: white;
+background-image: icons/source.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+label: data(namMngr);
+width:70;
+height:70;
+}
+
+
+node[type = "Publication"] {
+background-color: #000; 
+text-outline-color: white;
+background-image: icons/publication.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+label: data(title);
+}
+
+node[type = "Person"] {
+background-color: #fb9a99; 
+background-image: icons/person.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+text-outline-color: white;
+label: data(name);
+width:80;
+height:80; 
+}
+
+node[type = "Institution"] {
+background-color: #e31a1c; 
+text-outline-color: white;
+background-image: icons/institution.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+label: data(name);
+}
+
+node[type = "Role"] {
+background-color: #ff7f00; 
+text-outline-color: white;
+background-image: icons/role.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+label: data(name);
+}
+
+node[type = "Status"] {
+background-color: #c994c7; 
+text-outline-color: white;
+label: data(dscStatus);
+}
+
+node[type = "Ecosystem Service"] {
+background-color: #00ffff; 
+text-outline-color: white;
+background-image: icons/ecoserv.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+label: data(dscEcoS);
+}
+
+node[type = "Project"] {
+background-color: #a6cee3; 
+text-outline-color: white;
+background-image: icons/project.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+label: data(namProj);
+}
+
+node[type = "Proposal Objective"] {
+background-color: #d8b365; 
+text-outline-color: white;
+background-image: icons/objective.svg;
+shape: rectangle;
+border-opacity: 0;
+background-fit: contain;
+background-opacity: 0;
+label: data(dscUmb);
+width:70;
+height:70;
+}
+
+edge[interaction = "cw"] {
+line-color: white;
+}
+
+edge[type = "in"] {
+label: data(position);  
+}
+
+edge[interaction = "cr"] {
+line-color: #DE3128;
+}
+
+node.highlighted {
+	min-zoomed-font-size: 0;
+  z-index: 9999;
+}
+
+edge.highlighted {
+	opacity: 0.8;
+	width: 4;
+	z-index: 9999;
+}
+
+.faded {
+  events: no;
+  background-image-opacity:0.08;
+}
+
+node.faded {
+  opacity: 0.08;
+}
+
+edge.faded {
+  opacity: 0.06;
+}
+
+.hidden {
+	display: none;
+}
+
+.highlighted {
+
+}
+
+node:selected {
+	width: 40;
+	height: 40;
+	border-color: rgb(187, 219, 247);
+	border-opacity: 0.5;
+	border-width: 10;
+}
+
+.filtered {
+	display: none;
+}
+
+.timeline-filtered {
+	display: none;
+}

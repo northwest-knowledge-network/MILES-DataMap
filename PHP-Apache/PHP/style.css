@@ -1,0 +1,377 @@
+html, body {
+
+  font: 14px fontawesome, helvetica neue, helvetica, liberation sans, nimbus sans, nimbus sans l, arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+#cy {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+}
+
+#loading {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  margin-top: -0.5em;
+  font-size: 2em;
+  color: #000;
+}
+
+#loading.loaded {
+  display: none;
+}
+
+/*
+button {
+  font-size: 2em;
+  background-color: #FC4C4C;
+  color: #333;
+  border: 0;
+  cursor: pointer;
+  border-radius: 0.25em;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+  outline: 0;
+}
+*/
+
+.icon-size {
+  font-size: 16px;
+  color: #ff9933;
+}
+
+.center {
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+#clear {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0.25em;
+  visibility: hidden;
+}
+
+#search-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  margin: 0.5em;
+}
+
+.search-container, .search-operators {
+  float:left;
+}
+
+.search-operators {
+  margin: 0em 1em;
+}
+
+#search {
+  width: 14em;
+  font-family: inherit;
+}
+
+body.has-start #clear {
+  visibility: visible;
+}
+
+#end {
+  display: none;
+}
+
+body.has-start:not(.has-end) #end {
+  display: inline;
+}
+
+body.has-start:not(.has-end) #start {
+  display: none;
+}
+
+body.calc #loading {
+  display: block;
+}
+
+.tt-dropdown-menu {
+  background: #fff;
+  width: 14em;
+  border: 1px solid #ccc;
+  max-height: 80vh;
+  max-height: calc( 100vh - 4em );
+  overflow: auto;
+  margin-top: 0.5em;
+}
+
+.tt-dropdown-menu * {
+  margin: 0;
+  padding: 0;
+}
+
+.tt-suggestion {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.tt-suggestion + .tt-suggestion {
+  border-top: 1px solid #ccc;
+}
+
+.ac-name {
+  font-size: 1.25em;
+}
+
+.ac-node-type{
+  font-size: 1.4em;
+}
+
+.ac-milk,
+.ac-country,
+.ac-more {
+  font-size: 0.8em;
+}
+
+#info {
+  position: absolute;
+  left: 1em;
+  bottom: 60px;
+  margin: 0.5em;
+  /*background: #bbdbf7;*/
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 0 0 0.25em rgba(187, 219, 247, 0.9);
+  width: 14em;
+  display: none;
+}
+
+#info p {
+  margin: 0;
+}
+
+#linkout {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0.25em;
+  z-index: 999;
+}
+
+#reset,
+#filter,
+#about,
+#full-screen {
+  width: 3em;
+  margin: 0.5em;
+}
+
+.graph-button-wrapper {
+  position:absolute;
+  right: 2em;
+  z-index:999;
+}
+
+.graph-button {
+  float: left;
+}
+
+/*
+#reset {
+  top: 0;
+  right: 4em;
+}
+
+#filter {
+  top: 0;
+  right: 8em;
+}
+
+#full-screen {
+  top: 0;
+  right: 0;
+}
+*/
+#about {
+  bottom: 0;
+  left: 0;
+  position:absolute;
+  z-index:999;
+}
+
+#about-content p + p {
+  margin: 0;
+  margin-top: 0.5em;
+}
+
+.qtip-about {
+  width: 13em;
+}
+
+.qtip-about .qtip-content {
+  padding: 0.25em !important;
+}
+
+#reset i {
+  transform: rotate(45deg);
+}
+
+#filters label {
+  font-weight: normal;
+  padding: 0 0.25em;
+}
+
+#filters strong {
+  display: block;
+}
+
+#filters hr {
+  margin: 0.25em 0;
+}
+
+#filters {
+  display: none;
+  width: 240px;
+}
+
+.qtip #filter {
+  display: block;
+}
+
+.qtip-filters .qtip-content {
+  padding: 0 !important;
+  overflow: auto;
+  max-height: 80vh;
+  max-height: calc( 100vh - 4em );
+  width: 18em;
+}
+
+.filtersets {
+  width: 100%;
+ /* background-color: black; */
+  background-color: #fff;
+  margin-left: 0.5em;
+}
+
+.filterset {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1.1;
+}
+
+.filterset.right {
+
+}
+
+.filterset-section-title {
+  margin-left: 0.2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}
+
+.filter-section-label {
+  font-size: 1.25em;
+}
+
+.standalone-filter {
+  font-size: 1.25em;
+}
+
+* + .filterset-section-title {
+  border-top: 1px solid rgba(128, 128, 128, 0.15);
+  padding-top: 0.5em;
+  margin-left: 0;
+  padding-left: 0.2em;
+}
+
+.filterset input {
+  margin-left: 0.25em;
+}
+
+.filterset-title {
+  margin: 0.25em 0 0.25em 0.25em;
+}
+
+/* Need to override some Bootstrap styles here to make typeahead not appear over "Search" button. */
+.tt-dropdown-menu {
+  position: relative;
+  top: 5em !important;
+}
+
+/* Style for making Data Map full screen */
+.fullScreen {
+  width:100%;
+  height:100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Style for timeline slider */
+#time-slider-container {
+  width: 30%;
+  position: absolute;
+  z-index: 999;	
+  bottom: 1.0em;
+  right: 1.0em;
+}
+
+/* Media queries */
+/* Shift node info box over on smaller screens */
+@media only screen and (max-width:1300px){
+       #info {
+       	     left: 0em;
+       }
+}
+
+@media only screen and (max-width:800px){
+       .graph-button{  
+       		    float:none;
+       }       
+}
+
+/* Style for icons used in filter menu list */
+.filter-icon {
+  height:15px;
+}
+
+.data-filter {
+  color:#6a3d9a;
+}
+
+.question-filter {
+  color:#1f78b4;
+}
+
+.theme-filter {
+  color:#33a02c;
+}
+
+.topic-filter {
+  color:#ff7f00;
+}
+
+.subtopic-filter {
+  color:#fdbf6f;
+}
+
+.publication-filter {
+  color:#e31a1c; 
+}
+
+li {
+  display:block;
+}
+
+ul {
+  list-style:none;
+}
