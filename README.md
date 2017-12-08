@@ -60,21 +60,9 @@ This eliminates trying to do development inside a container, which is difficult 
 
 to run the containers. 
 This uses the Docker Compose system to start the containers.
-*Side note: the Apache containers sometimes has problems restarting after the first time being started and stopped. If this happens,    somewhere in the text displayed as the containers are starting, there will be an error with Apache container exiting code 0. If this happens, delete the Apache container by running (on Mac, Linux, or Docker Toolbox installations on Windows):
 
-`docker rm $(docker ps -a | grep 'development_apache' | awk '{print $1}')` 
-
-*or on Windows without Docker Toolbox installations first run:
-
-`docker ps -a`
-
-*and copy the Container ID of the 'development_apache-server.' Then, paste that container ID in to the following command:
-
-`docker rm containerID`
-
-*replacing containerID with the apache server's container ID you copied. This removes the old Apache container, and when you run "docker-compose up" again, it will remake the container, and it will work! Cause: pid 6 does not always stop in this Apache container when "docker-compse down" is run, so when the container tries to start again, it tries to start pid 6 again, but it is still running, throws an error, and exits. 
-
-**First Time Setup Only**
+7.1 First Time Setup Only
+----------------------------
 
 For the Data Map system, the import queries in Neo4j/import.txt file will be used. If a different database for a different project will be used, then replace the import.txt file with your own Cypher import queries.
 
@@ -100,7 +88,7 @@ replacing "containerID" with the Neo4j container's ID.
 
 **Run Update Script**
 
-* When the database is changed, the update script must be run. The system uses a cached version of the data at PHP-Apache/PHP/data.json for performance enhancements. However, when the database is first populated, or changed in any way, then the update script must regenerate this data.json file and save it.
+* When the database is changed, the update script must be run. The system queries the database, then saves a JSON representation of the data at PHP-Apache/PHP/results.json for performance enhancements. However, when the database is first populated, or changed in any way, then the update script must regenerate this results.json file and save it.
 
 To update the data used by the graph, run (on Mac, Linux, and non-Docker Toolbox installations on Windows):
 
@@ -118,10 +106,10 @@ The IP address of the Docker system for Docker Toolbox is displayed when the Doc
 **View Web Page**
 
  If all scripts execute without errors, then the webpage can be viewed at the following address for Mac and Windows (not using Docker Toolbox):
-`localhost:10000/php/`
+`localhost:10000`
 
 * and at the IP address specified for the Docker Toolbox system for Windows installations using Docker Toolbox
-`IPAddressOfDockerSystemOnWindows:10000/php/`
+`IPAddressOfDockerSystemOnWindows:10000`
 
 8 Editing webpage
 ------------------------------
@@ -148,7 +136,7 @@ replacing "pathToDatamapRepository" with the path on your development machine to
 
 11 Committing Changes to Git
 ------------------------------
-* Since all changes to PHP files are edited on the development machine, and not inside the Docker Containers, use Git on you development machine in the directory where the Git repo was cloned into to add, commit, and push changes.
+* Since all changes to PHP files are edited on the development machine (if you are using the development Docker compose script at StartScripts/Compose/Development/docker-compose.yml), and not inside the Docker Containers, use Git on you development machine in the directory where the Git repo was cloned into to add, commit, and push changes.
 
 * This Docker system mounts the PHP-Apache/PHP/ directory into the Apache server container, so that when a file in that directory is changed
 on you local machine, it is used in the Apache container too, so there is no need to use Bash in the container to make changes. 
