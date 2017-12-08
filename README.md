@@ -1,7 +1,7 @@
 Data Map: Visualize Neo4j graphs in a browser
 
 Steps to running it locally
-===========================
+
 1 Clone repo to local machine
 ------------------------------
 * Clone the repository using Git into an empty directory.
