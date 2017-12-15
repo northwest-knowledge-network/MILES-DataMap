@@ -48,10 +48,10 @@ exports.config = {
         browserName: 'chrome',
 	chromeOptions: {
 			args: [
-			       '--headless',
-			       '--disable-gpu',
-			       '--window-size=1280, 800',
-			       '--no-sandbox'
+			       //			       '--headless',
+			       //'--disable-gpu',
+			       //'--window-size=1280, 800',
+			       //'--no-sandbox'
 			       ],
 			//binary: '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 	    }
