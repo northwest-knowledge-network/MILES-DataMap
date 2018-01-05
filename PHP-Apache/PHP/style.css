@@ -68,14 +68,7 @@ button {
   top: 0;
   z-index: 9999;
   margin: 0.5em;
-}
-
-.search-container, .search-operators {
-  float:left;
-}
-
-.search-operators {
-  margin: 0em 1em;
+  width: 14em;
 }
 
 #search {
@@ -329,13 +322,13 @@ body.calc #loading {
 /* Shift node info box over on smaller screens */
 @media only screen and (max-width:1300px){
        #info {
-       	     left: 0em;
+       	          left: 0em;
        }
 }
 
 @media only screen and (max-width:800px){
        .graph-button{  
-       		    float:none;
+			    float:none;
        }       
 }
 

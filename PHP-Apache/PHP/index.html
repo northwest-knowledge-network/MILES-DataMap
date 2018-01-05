@@ -27,15 +27,15 @@
     <span class="fa fa-refresh fa-spin"></span>
   </div>
   <div id="search-wrapper">
-	<div id="search-input-container-1" class="search-container">
-        	<select id="query-node-1" class="query-node-selector">
+    <div id="search-input-container-1" class="search-container">
+      <select id="query-node-1" class="query-node-selector">
                 </select>
 
-		<input type="text" class="form-control node-search-input" id="search-input-1" autofocus placeholder="Search">       
-		<button id="remove-form-input" type="button" class="btn btn-default btn-circle"><span class="glyphicon glyphicon-remove"></span></button>
-		<button id="add-form-input" type="button" class="btn btn-default btn-circle"><span class="glyphicon glyphicon-plus"></span></button>
-		<button id="search-shortest-path" type="button" class="btn btn-default">Search</button>
-	</div>
+      <input type="text" class="form-control node-search-input" id="search-input-1" autofocus placeholder="Search">       
+      <button id="remove-form-input" type="button" class="btn btn-default btn-circle"><span class="glyphicon glyphicon-remove"></span></button>
+      <button id="add-form-input" type="button" class="btn btn-default btn-circle"><span class="glyphicon glyphicon-plus"></span></button>
+      <button id="search-shortest-path" type="button" class="btn btn-default">Search</button>
+      </div>
   </div>
   <div id="info">
   </div>
@@ -67,22 +67,23 @@
   </div>
 
   <div id="filters">
-    <ul>
-      <li class="filtersets filter-section-title">
-        <input id="umbr" type="checkbox" checked><label for="umbr" class="theme-filter filter-section-label">Proposal Objective  <img class="filter-icon" alt="Objective icon" src="./icons/objective.svg"></label><br />
-      </li>
-      <li class="filtersets filter-section-title">
-        <input id="theme" type="checkbox" checked><label for="theme" class="theme-filter filter-section-label">Research Theme  <img class="filter-icon" alt="Research icon" src="./icons/theme.svg"></label><br />
-      </li>
-      <li class="filtersets filter-section-title">
-        <input id="ecos" type="checkbox" checked><label for="ecos" class="theme-filter filter-section-label">Ecosystem Service <img class="filter-icon" alt="Ecosystem Service icon" src="./icons/ecoserv.svg"></label><br />
-      </li>
-      <li class="filtersets filterset-section-title">
+    <!-- <div class="filterset-section-title">Cheese</div> -->
+      <ul>
+        <li class="filtersets filter-section-title">
+          <input id="umbr" type="checkbox" checked><label for="umbr" class="theme-filter filter-section-label">Proposal Objective  <img class="filter-icon" alt="Objective icon" src="./icons/objective.svg"></label><br />
+        </li>
+        <li class="filtersets filter-section-title">
+          <input id="theme" type="checkbox" checked><label for="theme" class="theme-filter filter-section-label">Research Theme  <img class="filter-icon" alt="Research icon" src="./icons/theme.svg"></label><br />
+        </li>
+        <li class="filtersets filter-section-title">
+          <input id="ecos" type="checkbox" checked><label for="ecos" class="theme-filter filter-section-label">Ecosystem Service <img class="filter-icon" alt="Ecosystem Service icon" src="./icons/ecoserv.svg"></label><br />
+        </li>
+        <li class="filtersets filterset-section-title">
           <input id="perso" type="checkbox" checked><label for="perso" class="filter-section-label">Person <img class="filter-icon" alt="Person icon" src="./icons/person.svg"></label><br />
           <ul>
             <li>
               <input id="insti" type="checkbox" checked><label for="insti">Institution <img class="filter-icon" alt="Institution icon" src="./icons/institution.svg"></label><br />
-            </li>	      
+            </li>      
             <li>
               <input id="depa" type="checkbox" checked><label for="depa">Department <img class="filter-icon" alt="Department icon" src="./icons/department.svg"></label><br />
             </li>
@@ -90,48 +91,64 @@
               <input id="role" type="checkbox" checked><label for="role">Role <img class="filter-icon" alt="Role icon" src="./icons/role.svg"></label><br />
             </li>
           </ul>
-      </li>
-      
-      <li class="filtersets filterset right filterset-section-title">
-        <input id="data" type="checkbox" checked><label for="data" class="data-filter filter-section-label">Data <img class="filter-icon" alt="Data icon" src="./icons/data.svg"></label><br />
-        <ul>
-	  <li>
-            <input id="cla" type="checkbox" checked><label for="cla" class="data-filter">Data Type <img class="filter-icon" alt="Data Type icon" src="./icons/type.svg"></label><br />
+        </li>
+	
+        <li class="filtersets filterset right filterset-section-title">
+          <input id="data" type="checkbox" checked><label for="data" class="data-filter filter-section-label">Data <img class="filter-icon" alt="Data icon" src="./icons/data.svg"></label><br />
+          <ul>
+	        <li>
+              <input id="cla" type="checkbox" checked><label for="cla" class="data-filter">Data Type <img class="filter-icon" alt="Data Type icon" src="./icons/type.svg"></label><br />
+	          </li>
+		    <li>
+              <input id="src" type="checkbox" checked><label for="src" class="data-filter">Data Source <img class="filter-icon" alt="Person icon" src="./icons/source.svg"></label><br />
+	          </li>
+		        <!--
+			    <li>
+                  <input id="metho" type="checkbox" checked><label for="metho" style="color: #e5f5e0;">Method</label><br />
+		  </li> -->
+			    <li>
+              <input id="repo" type="checkbox" checked><label for="repo" class="data-filter">Data Repository  <img class="filter-icon" alt="Data Repository icon" src="./icons/repository.svg"></label><br />
+	          </li> 
+          </ul>
+        </li>
+        <li class="filtersets filterset left filterset-section-title">
+          <input id="questi" type="checkbox" checked><label for="questi" class="question-filter filter-section-label">Question <img class="filter-icon" alt="Question icon" src="./icons/question.svg"></label><br />
+          <ul>
+	        <li>
+              <input id="proje" type="checkbox" checked><label for="proje" class="question-filter">Project <img class="filter-icon" alt="Project icon" src="./icons/project.svg"></label> <br />
+	          </li>
+		    
+		    <!--  <li>
+                  <input id="loca" type="checkbox" checked><label for="loca" style="color: #eff3ff;">Location</label><br />
+              </li> -->
+          </ul>
+        </li>
+        <li class="filtersets filterset right filterset-section-title">
+          <input id="publi" type="checkbox" checked><label for="publi" class="publication-filter filter-section-label">Publication <img class="filter-icon" alt="Publication icon" src="./icons/publication.svg"></label><br />
+          <ul>
+	        <!--  <li>
+                  <input id="statu" type="checkbox" checked><label for="statu" style="color: #c994c7;">Status</label><br />
+		        </li> -->
+          </ul>
+        </li>
+	
+        <li class="filtersets filterset left filterset-section-title">
+	    <div class="filterset-section-title"></div>
+	      <input id="topi" type="checkbox" checked><label for="topi" class="topic-filter filter-section-label">Topic <img class="filter-icon" alt="Topic icon" src="./icons/topic.svg"></label>
+	      </li>
+	<li>
+          <ul>
+            <li>
+              <input id="subtopic" type="checkbox" checked><label for="subtopic" class="subtopic-filter">Subtopic <img class="filter-icon" alt="Subtopic icon" src="./icons/subtopic.svg"></label> <br />
+            </li>
+	        <!--
+		    <li>
+                  <input id="loca" type="checkbox" checked><label for="loca" style="color: #65DEF1;">Location</label><br />
+		  </li>
+		    -->
+          </ul>
 	  </li>
-	  <li>
-            <input id="src" type="checkbox" checked><label for="src" class="data-filter">Data Source <img class="filter-icon" alt="Person icon" src="./icons/source.svg"></label><br />
-	  </li>
-	  <li>
-            <input id="repo" type="checkbox" checked><label for="repo" class="data-filter">Data Repository  <img class="filter-icon" alt="Data Repository icon" src="./icons/repository.svg"></label><br />
-	  </li> 
-        </ul>
-      </li>
-      <li class="filtersets filterset left filterset-section-title">
-        <input id="questi" type="checkbox" checked><label for="questi" class="question-filter filter-section-label">Question <img class="filter-icon" alt="Question icon" src="./icons/question.svg"></label><br />
-        <ul>
-	  <li>
-            <input id="proje" type="checkbox" checked><label for="proje" class="question-filter">Project <img class="filter-icon" alt="Project icon" src="./icons/project.svg"></label> <br />
-	  </li>
-        </ul>
-      </li>
-      <li class="filtersets filterset right filterset-section-title">
-        <input id="publi" type="checkbox" checked><label for="publi" class="publication-filter filter-section-label">Publication <img class="filter-icon" alt="Publication icon" src="./icons/publication.svg"></label><br />
-        <ul>
-        </ul>
-      </li>
-      
-      <li class="filtersets filterset left filterset-section-title">
-	<div class="filterset-section-title"></div>
-	<input id="topi" type="checkbox" checked><label for="topi" class="topic-filter filter-section-label">Topic <img class="filter-icon" alt="Topic icon" src="./icons/topic.svg"></label>
-      </li>
-      <li>
-        <ul>
-          <li>
-            <input id="subtopic" type="checkbox" checked><label for="subtopic" class="subtopic-filter">Subtopic <img class="filter-icon" alt="Subtopic icon" src="./icons/subtopic.svg"></label> <br />
-          </li>
-        </ul>
-      </li>
-    </ul>
+      </ul>
   </div>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
